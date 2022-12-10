@@ -1,0 +1,10 @@
+let A=25,i;
+let B=Math.ceil(Math.sqrt(A));
+for(i=0;i<B;i++)
+{
+	for(let j=i+1;j<=B;j++){
+	if((i*i)+(j*j)===A)
+	console.log(i,j);
+	}
+
+}
