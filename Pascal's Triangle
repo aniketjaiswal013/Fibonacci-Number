@@ -1,0 +1,15 @@
+var generate = function(numRows) {
+    // i,j = i-1,j-1 + i-1,j
+    var solution = [];
+    for(var i = 0 ; i < numRows ; i ++) {
+        solution[i] = [];
+        for(var j = 0 ; j <=i; j++) {
+            if(j === 0 || j === i) {
+                solution[i][j] = 1;
+            } else {
+                solution[i][j] = solution[i - 1][j - 1] + solution[i - 1][j];
+            }
+        }
+    }
+    return solution;
+};
